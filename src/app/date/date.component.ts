@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'date',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DateComponent implements OnInit {
 
-  message: string = new Date().toDateString(); 
+  // message: string = new Date().toDateString(); 
+  dateMessage: string;
+  
 
-  constructor() { }
+  constructor() { 
+    this.dateMessage = new Date().toDateString();
+  }
 
   ngOnInit() {
   }
