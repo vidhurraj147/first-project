@@ -13,7 +13,8 @@ export class DateComponent implements OnInit {
   
 
   constructor() { 
-    this.dateMessage = new Date().toDateString();
+    let currentDate = new Date();
+    this.dateMessage = currentDate.toDateString() + ' ' + currentDate.toLocaleTimeString();
   }
 
   ngOnInit() {
